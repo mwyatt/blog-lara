@@ -11,8 +11,13 @@
 |
 */
 
-// Route::get('/', 'Controller@index');
+Route::get('/', 'Controller@index');
 Route::get('/users', 'UsersController@index');
 Route::get('/users/create', 'UsersController@create');
 Route::get('/users/{user}', 'UsersController@show');
 Route::post('/users', 'UsersController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

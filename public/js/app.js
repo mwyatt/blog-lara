@@ -99,7 +99,6 @@ module.exports = __webpack_require__(2);
 // });
 
 console.log('hi');
-errotime;
 
 /***/ }),
 /* 2 */
