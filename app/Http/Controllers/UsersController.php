@@ -38,7 +38,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(\App\User $user)
     {
         // $user = \App\User::find(request()->get('id'));
         $this->validate(request(), [
@@ -46,7 +46,7 @@ class UsersController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        // if ($user) {
+        // if ($user->id) {
         //     $user->name = 
         // }
         \App\User::create(request(['name', 'email', 'password']));
