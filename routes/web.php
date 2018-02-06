@@ -19,5 +19,7 @@ Route::post('/users', 'UsersController@store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'Admin@index')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/admin', 'Admin@index');
