@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Controller@index');
+Route::get('/', 'Controller@index')->middleware('common');
 Route::get('/users', 'UsersController@index');
 Route::get('/users/create', 'UsersController@create');
 Route::get('/users/{user}', 'UsersController@show');
