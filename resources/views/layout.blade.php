@@ -52,13 +52,15 @@
 
      -->
 
+{{asset('storage/test.txt')}}
+
 <div id="top"></div>
-<a href="#top" class="to-top js-smooth-scroll"><span class="to-top-image">@svg('asset/arrow-up', 'Arrow up')</span></a>
+<a href="#top" class="to-top js-smooth-scroll"><span class="to-top-image">@svg('arrow-up', 'Arrow up')</span></a>
 <div class="site-wrap site-max-width">
     <header class="header header-bar js-header">
         <div class="header-bar-inner site-max-width clearfix">   
         <div class="header-logo-container">
-            <a href="" class="header-logo">@svg('asset/logo', 'Logo')</a>
+            <a href="" class="header-logo">@svg('logo', 'Logo')</a>
         </div>
 
 @if (isset($menuPrimary))
