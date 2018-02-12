@@ -55,12 +55,12 @@
 {{asset('storage/test.txt')}}
 
 <div id="top"></div>
-<a href="#top" class="to-top js-smooth-scroll"><span class="to-top-image">@svg('arrow-up', 'Arrow up')</span></a>
+<a href="#top" class="to-top js-smooth-scroll"><span class="to-top-image">{{--@svg('arrow-up', 'Arrow up')--}}</span></a>
 <div class="site-wrap site-max-width">
     <header class="header header-bar js-header">
         <div class="header-bar-inner site-max-width clearfix">   
         <div class="header-logo-container">
-            <a href="" class="header-logo">@svg('logo', 'Logo')</a>
+            <a href="" class="header-logo">{{--@svg('logo', 'Logo')--}}</a>
         </div>
 
 @if (isset($menuPrimary))
@@ -84,33 +84,6 @@
     </header>
     <div class="page-container">
 
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
-    <!-- 
-         _   _  _ _ _ 
-        | \_/ || | | |
-        | \_/ || V V |
-        |_| |_| \_n_/ 
-        Welcome fellow developers!
-    -->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
-</head>
-<body>
-    <div class="container">
-        
         @yield('content')
 
     </div>
