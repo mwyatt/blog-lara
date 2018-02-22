@@ -52,8 +52,6 @@
 
      -->
 
-{{asset('storage/test.txt')}}
-
 <div id="top"></div>
 <a href="#top" class="to-top js-smooth-scroll"><span class="to-top-image">{{--@svg('arrow-up', 'Arrow up')--}}</span></a>
 <div class="site-wrap site-max-width">
