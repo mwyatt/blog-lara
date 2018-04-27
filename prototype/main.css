@@ -1,0 +1,175 @@
+body {
+    font-family: 'Open Sans', 'Arial';
+}
+
+.feature-mask {
+    background-color: #401b0080;
+}
+
+.copy {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    color: #666;
+}
+
+.lg-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.menu {
+    display: table;
+    z-index: 2;
+    width: 100%;
+}
+
+.menu-item {
+    /*font-size: 1.4rem;*/
+    /*color: #666;*/
+}
+
+.logo:hover {
+    fill: #19c3e6;
+}
+
+a.logo {
+    fill: #33b2cc;
+    display: inline-block;
+    width: 120px;
+    height: 68px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+a.logo svg {
+    width: 100%;
+}
+
+.feature {
+    background-image: url(bg2.jpg);
+    background-position: 60% 0;
+    background-repeat: no-repeat;
+    background-size: 320%;
+}
+
+.feature-body {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+    .d-table-cell {
+        vertical-align: middle;
+    }
+
+    .feature {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 33.333333%;
+    }
+
+    .feature-body {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 6rem;
+    }
+}
+
+.feature-name {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.feature-role {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.menu-item:hover .menu-item-link,
+.is-active .menu-item-link {
+    color: #33b2cc;
+    border-bottom: 2px solid #33b2cc;
+}
+
+.menu-item-link {
+    color: #fff;
+}
+
+.menu-item-link:hover {
+    text-decoration: none;
+}
+
+.project-avo {
+    background-color: #74a611;
+    background-image: url(project-avo.jpg);
+    background-position: 20px 153px;
+    background-size: 410px;
+    background-repeat: no-repeat;
+}
+
+.project-github {
+    background-color: #666;
+    background-image: url(project-github.png);
+    background-position: 20px 153px;
+    background-size: 410px;
+    background-repeat: no-repeat;
+}
+
+.project-acme {
+    background-color: #33b2cc;
+    background-image: url(project-acme.jpg);
+    background-position: 20px 153px;
+    background-size: 410px;
+    background-repeat: no-repeat;
+}
+
+.project-elttl {
+    background-color: #f07818;
+    background-image: url(project-elttl.jpg);
+    background-position: 20px 153px;
+    background-size: 410px;
+    background-repeat: no-repeat;
+}
+
+.project:hover {
+    opacity: .9;
+}
+.project {
+    height: 420px;
+    fill: #fff;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.project-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    opacity: .8;
+    color: #fff;
+}
+
+.project-logo-avo {
+    position: absolute;
+    bottom: 6rem;
+    right: 2rem;left: 2rem;
+}
