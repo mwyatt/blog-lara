@@ -11,6 +11,16 @@
 |
 */
 
+Route::get('/articles/', 'Controller@example');
+
+Route::get('/{slug}/', function ($slug) {
+    echo '<pre>';
+    print_r("Slug: $slug");
+    echo '</pre>';
+    exit;
+    
+})->where('slug', '[a-z]+');
+
 Route::get('/', function () {
     $articles = [
         (object) [
