@@ -13,14 +13,6 @@
 
 Route::get('/articles/', 'Controller@example');
 
-Route::get('/{slug}/', function ($slug) {
-    echo '<pre>';
-    print_r("Slug: $slug");
-    echo '</pre>';
-    exit;
-    
-})->where('slug', '[a-z]+');
-
 Route::get('/', function () {
     $articles = [
         (object) [
@@ -79,3 +71,17 @@ Route::get('/', function () {
         'articles' => $articles,
     ]);
 })->name('index');
+
+Auth::routes();
+
+Route::get('admin', 'Auth\LoginController@showLoginForm');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{slug}/', function ($slug) {
+    echo '<pre>';
+    print_r("Slug: $slug");
+    echo '</pre>';
+    exit;
+    
+})->where('slug', '[a-z]+');
