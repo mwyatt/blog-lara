@@ -14,7 +14,7 @@
     <div class="feature">
         <div class="feature-mask">
             <div class="menu text-center pt-4">
-                <div class="menu-item is-active d-inline-block pl-3 pr-3"><a href="#" class="menu-item-link pb-1">Projects</a></div>
+                <div class="menu-item is-active d-inline-block pl-3 pr-3"><a href="{{route('index')}}" class="menu-item-link pb-1">Projects</a></div>
                 <div class="menu-item d-inline-block pl-3 pr-3"><a href="#" class="menu-item-link pb-1">Writing</a></div>
                 <div class="menu-item d-inline-block pl-3 pr-3"><a href="#" class="menu-item-link pb-1">Contact</a></div>
             </div>

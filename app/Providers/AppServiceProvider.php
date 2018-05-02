@@ -13,6 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        \Schema::defaultStringLength(191);
+
         \Blade::directive('svg', function($arguments) {
             // Funky madness to accept multiple arguments into the directive
             list($path, $class) = array_pad(explode(',', trim($arguments, "() ")), 2, '');

@@ -78,4 +78,4 @@ Route::get('/', function () {
         'projects' => $projects,
         'articles' => $articles,
     ]);
-});
+})->name('index');
