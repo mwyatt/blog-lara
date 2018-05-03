@@ -14,7 +14,22 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Contents</div>
+                <div class="card-body">
+                    <a href="{{route('contents.create')}}" class="btn btn-primary">Create</a>
+    
+                    @foreach ($contents as $content)
+                        
+                        <div>
+                            <a href="{{route('contents.show')}}">{{$content->title}}</a>
+                        </div>
+
+                    @endforeach
+
                 </div>
             </div>
         </div>

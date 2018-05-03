@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $contents = \App\Content::all();
+        return view('home', ['contents' => $contents]);
+    }
+
+
+    public function content($id)
+    {
+        
     }
 }

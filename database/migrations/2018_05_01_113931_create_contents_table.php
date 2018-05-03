@@ -17,7 +17,7 @@ class CreateContentsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->integer('type');
             $table->longText('body');
         });

@@ -74,9 +74,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('admin', 'Auth\LoginController@showLoginForm');
+Route::get('admin', 'Auth\LoginController@showLoginForm')->name('admin');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resources([
+    'admin/contents' => 'Admin\ContentController',
+]);
 
 Route::get('/{slug}/', function ($slug) {
     echo '<pre>';

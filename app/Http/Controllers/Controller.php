@@ -10,14 +10,4 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-
-    public function example()
-    {
-        echo '<pre>';
-        print_r('example');
-        echo '</pre>';
-        exit;
-        
-    }
 }
