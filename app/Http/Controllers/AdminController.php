@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,12 +24,6 @@ class HomeController extends Controller
     public function index()
     {
         $contents = \App\Content::all();
-        return view('home', ['contents' => $contents]);
-    }
-
-
-    public function content($id)
-    {
-        
+        return view('admin', ['contents' => $contents]);
     }
 }

@@ -18,8 +18,10 @@ class CreateContentsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->integer('type');
+            $table->integer('type')->default(0);
             $table->longText('body');
+            $table->string('shortDesc')->default('');
+            $table->integer('status')->default(0);
         });
     }
 

@@ -8,12 +8,17 @@ use App\Http\Controllers\Controller;
 class ContentController extends Controller
 {
 
-
     public function __construct()
     {
         $this->middleware('auth');
     }
 
+    public function getSlug(Request $request)
+    {
+        $title = $request->input('title', '');
+        $title = str_slug($title, '-');
+        return response()->json($title);
+    }
 
     /**
      * Display a listing of the resource.
@@ -33,7 +38,7 @@ class ContentController extends Controller
     public function create()
     {
         $content = new \App\Content;
-        return view('admin/content-single', ['content' => $content]);
+        return $this->show($content);
     }
 
     /**
@@ -45,12 +50,19 @@ class ContentController extends Controller
     public function store(Request $request)
     {
         $content = new \App\Content;
+        return $this->storeRedirect($request, $content);
+    }
+
+    public function storeRedirect($request, $content)
+    {
         $content->title = $request->input('title');
         $content->slug = $request->input('slug');
         $content->type = $request->input('type');
-        $content->body = $request->input('body');
+        $content->body = $request->input('body');        
+        $content->status = $request->input('status');        
+        $content->shortDesc = $request->input('shortDesc');        
         $content->save();
-        return redirect('admin');
+        return redirect(route('contents.show', $content));
     }
 
     /**
@@ -59,9 +71,12 @@ class ContentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(\App\Content $content)
     {
-        //
+        return view('admin/content', [
+            'content' => $content,
+            'formAction' => $content ? route('contents.update', $content) : route('contents.store'),
+        ]);
     }
 
     /**
@@ -82,9 +97,9 @@ class ContentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, \App\Content $content)
     {
-        //
+        return $this->storeRedirect($request, $content);
     }
 
     /**
